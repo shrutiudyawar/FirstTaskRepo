@@ -1,0 +1,140 @@
+--> making directory and initialising it
+
+mkdir GitTestRepo
+
+cd GitTestRepo
+
+pwd
+
+git init
+
+-->creating text files in master branch
+
+notepad Testfile.txt
+
+git status
+
+git add Testfile.txt
+
+git status
+
+git commit -m "sample test file created"
+
+git log
+
+git checkout -b Dev
+
+git checkout master
+
+notepad File1.txt
+
+notepad File2.txt
+
+notepad File3.txt
+
+-->creating Dev branch and commiting first file
+
+git checkout Dev
+
+git status
+
+git add File1.txt
+
+git commit -m "first commit performed"
+
+git status
+
+git log
+
+git checkout master
+
+-->creating Test branch and commiting two files
+
+git checkout -b Test
+
+git status
+
+git add File2.txt
+
+ git commit -m "second commit performed"
+
+ git add File3.txt
+
+git status
+
+git commit -m "third commit done"
+
+git log
+
+-->modifying first file and commiting changes
+
+git checkout Dev
+
+notepad File1.txt
+
+cat File1.txt
+
+git status
+
+git log
+
+git add File1.txt
+
+ git commit -m "minor changes implemented in first file"
+
+git log
+
+--> using git diff command to identify differences between two commits of same file using their commit ids
+
+git diff 57d82436d0b5ffd2c571e8183d3c14f0d7b58e96 f751dbecc7025eb1be68c6070afe9e9c30b6249d
+
+-->switching to master branch for merging Dev and Test branch
+
+git checkout master
+
+git merge Dev
+
+git merge Test
+
+git branch
+
+-->adding remote repository to local machine
+
+ git remote add origin https://github.com/shrutiudyawar/FirstTaskRepo.git
+
+git remote -v
+
+-->pushing changes from local master branch to remote master branch
+
+git push -u origin master
+
+cd ..
+
+-->creating new directory and cloning an existing git repo into it
+
+mkdir TaskRepo
+
+cd TaskRepo
+
+git clone https://github.com/shrutiudyawar/FirstTaskRepo.git
+
+ls FirstTaskRepo
+
+cd FirstTaskRepo
+
+-->creating a new file inside the cloned directory
+
+notepad Solution.txt
+
+git status
+
+-->commiting file
+
+git add Solution.txt
+
+git commit -m Solution.txt
+
+-->pushing changes to remote master branch from local master branch
+
+git push -u origin master
+
